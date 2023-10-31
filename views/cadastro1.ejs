@@ -3,12 +3,55 @@
 <html lang="ptbr">
 
 <head>
-    
-    <link rel="shortcut icon" href="https://github.com/GeovannaNascimento/Medical_Group2/blob/main/SP%20Medical%20Group/img/logo.png?raw=true">
+    <link rel="stylesheet" type="text/css" href="/css/cadastro.css">
+    <link rel="shortcut icon" type="image/jpg" href="/img/logo.png">
     <title>SP Medical Group</title>
-
+    <script src="/js/cadastro.js"></script>
 </head>
-<style>
+
+<body>
+    <header>
+        <div>
+            <img src="/img/logo.png" type="img" class="logo" height="95" width="95">
+        </div>
+        <h1 class="titulo">SP Medical Group</h1>
+    </header>
+
+    <div class="rectangle"></div>
+    <div class="rectangle2"></div>
+
+    <div class="cadastro">
+        <h3>Cadastre-se</h3>
+    </div>
+
+    <div class="fundo">
+        <img src="https://blog.imedicina.com.br/wp-content/uploads/2017/09/iStock-1136865476-1200x695.jpg" alt="Imagem de fundo"/>
+    </div>
+
+    <div class="email">
+        <input type="email" id="email" placeholder="Email">
+    </div>
+
+    <div class="cpf">
+        <input type="text" id="cpf" placeholder="CPF">
+    </div>
+
+    <div class="senha">
+        <input type="password" id="password" placeholder="Senha">
+    </div>
+
+    <div class="confirmarsenha">
+        <input type="password" id="confirmPassword" placeholder="Confirmar Senha">
+    </div>
+
+    <a href="/html/login1.html"><img src="/img/btn voltar.png" class="voltar"></a>
+
+
+    <div class="cadastrar">
+        <button onclick="Cadastrar()">Cadastrar</button> 
+    </div>
+</form>
+    <style>
 
 * {
   margin: 0%;
@@ -206,51 +249,5 @@ body {
 
 
 </style>
-<body>
-    <header>
-        <div>
-            <img src="https://github.com/GeovannaNascimento/Medical_Group2/blob/main/SP%20Medical%20Group/img/logo.png?raw=true" type="img" class="logo" height="95" width="95">
-        </div>
-        <h1 class="titulo">SP Medical Group</h1>
-    </header>
-
-    <div class="rectangle"></div>
-    <div class="rectangle2"></div>
-
-    <div class="cadastro">
-        <h3>Cadastre-se</h3>
-    </div>
-
-
-<form action="/add" method="POST">
-
-    <div class="fundo">
-        <img src="https://blog.imedicina.com.br/wp-content/uploads/2017/09/iStock-1136865476-1200x695.jpg" alt="Imagem de fundo"/>
-    </div>
-
-    <div class="email">
-        <label for="email">E-mail</label>
-        <input type="email" name="email" placeholder="Digite o email" required>
-    </div>
-
-    <div class="cpf">
-        <label for="CPF">CPF</label>
-        <input type="text" name="CPF" placeholder="XXX. XXX. XXX-YY" required>
-    </div>
-
-    <div class="senha">
-        <label for="senha">Senha</label>
-        <input type="text" name="senha" placeholder="Digite sua senha" required>
-    </div>
-
-
-    <a href="login1"><img src="https://github.com/GeovannaNascimento/Medical_Group2/blob/main/SP%20Medical%20Group/img/btn%20voltar.png?raw=true" class="voltar"></a>
-
-
-    <div class="cadastrar">
-        <button type="submit">Cadastrar</button> 
-    </div>
-</form>
-    
 </body>
 </html>

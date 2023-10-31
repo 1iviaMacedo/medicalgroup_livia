@@ -12,6 +12,7 @@ const db = mysql.createConnection({
   password: 'aluno',
   database: 'isadora'
 });
+
 db.connect((err) => {
   if (err) {
       console.error('Erro ao conectar ao banco de dados:', err);
@@ -19,6 +20,7 @@ db.connect((err) => {
   }
   console.log('Conexão com o banco de dados MySQL estabelecida.');
 });
+
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -29,7 +31,7 @@ app.set('view engine', 'ejs');
 app.get('/cadastro', (req, res) => {
   db.query('SELECT * FROM dados', (err, result) => {
    if (err) throw err;
-    res.render('cadastro1', { dados: result });
+    res.render('cadastro', { dados: result });
   });
 });
 
@@ -50,23 +52,17 @@ app.get('/login2', (req, res) => {
 app.get('/agendar', (req, res) => {
   db.query('SELECT * FROM dados', (err, result) => {
    if (err) throw err;
-    res.render('agendar1', { dados: result });
+    res.render('agendar', { dados: result });
   });
 });
 
 app.get('/consultas', (req, res) => {
   db.query('SELECT * FROM dados', (err, result) => {
    if (err) throw err;
-    res.render('consultas1', { dados: result });
+    res.render('consultas', { dados: result });
   });
 });
 
-app.get('/index', (req, res) => {
-  db.query('SELECT * FROM dados', (err, result) => {
-   if (err) throw err;
-    res.render('index', { dados: result });
-  });
-});
 
 
 app.get('/inicio', (req, res) => {
@@ -120,6 +116,11 @@ app.get('/delete/:id', (req, res) => {
     res.redirect('/');
   });
 });
+
+
+
+
+
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

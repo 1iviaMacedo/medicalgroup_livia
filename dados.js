@@ -12,11 +12,14 @@ const db = mysql.createConnection({
   password: 'aluno',
   database: 'isadora'
 });
-
 db.connect((err) => {
-  if (err) throw err;
-  console.log('Connected to MySQL');
+  if (err) {
+      console.error('Erro ao conectar ao banco de dados:', err);
+      throw err;
+  }
+  console.log('Conexão com o banco de dados MySQL estabelecida.');
 });
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
